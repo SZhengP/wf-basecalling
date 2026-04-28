@@ -214,7 +214,7 @@ process stopCondition {
 process output_stream {
     // publish inputs to output directory
     label "wf_basecalling"
-    publishDir "${params.out_dir}", mode: 'copy', pattern: "*"
+    publishDir "${params.out_dir}/stream/", mode: 'copy', pattern: "*"
     input:
         path fname
     output:
